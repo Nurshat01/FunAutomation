@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class LoginTest extends Bitrix24Elements {
-Bitrix24Elements bitrix24Elements;
+    Bitrix24Elements bitrix24Elements;
 
     @Test
     public void logIn() {
@@ -23,7 +23,7 @@ Bitrix24Elements bitrix24Elements;
         //  get the Url from the file (configuration.properties)
         String url=WebInformationReader.getProperties("Bitrix24Url");
 
-        driver.get(url);
+        Driver.getDiver().get(url);
 
         bitrix24Elements=new Bitrix24Elements();
 
@@ -40,10 +40,8 @@ Bitrix24Elements bitrix24Elements;
         bitrix24Elements.LoginButton.click();
 
 
-
-
-
     }
+
 
 
 }

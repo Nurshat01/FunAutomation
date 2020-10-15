@@ -9,7 +9,7 @@ public class Bitrix24Elements  extends TestBase {
 
     public Bitrix24Elements (){
 
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(Driver.getDiver(),this);
 
     }
 
