@@ -1,7 +1,6 @@
 package Pages.Package;
 
 import UtilityWedDriverFactory.Driver;
-import UtilityWedDriverFactory.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -17,6 +16,9 @@ public abstract class TestBase {
         driver= Driver.getDiver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+
+
 
     }
 
