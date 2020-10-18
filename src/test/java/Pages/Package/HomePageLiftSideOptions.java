@@ -1,17 +1,15 @@
 package Pages.Package;
 
+import Tests.TestBase;
 import UtilityWedDriverFactory.BrowserUtils;
 import UtilityWedDriverFactory.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
-public class HomePageLiftSideOptions extends  TestBase{
+public class HomePageLiftSideOptions extends TestBase {
 
 
     public HomePageLiftSideOptions (){
@@ -59,17 +57,27 @@ public class HomePageLiftSideOptions extends  TestBase{
 
 public void OptionsInTheList(){
 
-   LinkedHashSet<WebElement> optionsInTheList=new LinkedHashSet<>();
-    optionsInTheList.addAll(Arrays.asList(tasksOption,chatAndCallsOption,workGroupsOption,driverOption,calendarOption,
+//   LinkedHashSet<WebElement> optionsInTheList=new LinkedHashSet<>();
+//
+//    optionsInTheList.addAll(Arrays.asList(tasksOption,chatAndCallsOption,workGroupsOption,driverOption,calendarOption,
+//            mailOption,contactCenterOption,timeAndReportsOption,employeesOption,servicesOption,companyOption));
+//
+//    List<WebElement> options= (List<WebElement>) optionsInTheList;
+//
+//    for (int i = 0; i <options.size() ; i++) {
+//            options.get(i).click();
+//        BrowserUtils.Wait(2);
+//              Driver.getDiver().navigate().back();
+//    }
+
+     List<WebElement>optiononLife=new ArrayList<>();
+     optiononLife.addAll(Arrays.asList(tasksOption,chatAndCallsOption,workGroupsOption,driverOption,calendarOption,
             mailOption,contactCenterOption,timeAndReportsOption,employeesOption,servicesOption,companyOption));
-
-    List<WebElement> options= (List<WebElement>) optionsInTheList;
-
-    for (int i = 0; i <options.size() ; i++) {
-            options.get(i).click();
-        BrowserUtils.Wait(2);
-              Driver.getDiver().navigate().back();
+    for (int i = 0; i <optiononLife.size() ; i++) {
+        optiononLife.get(i).click();
+        Driver.getDiver().navigate().back();
     }
+
 
 
 }
