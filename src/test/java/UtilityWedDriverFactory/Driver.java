@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class Driver {
 
     private Driver(){}
@@ -19,14 +21,20 @@ public class Driver {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver=new ChromeDriver();
+                    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+                    driver.manage().window().maximize();
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver=new FirefoxDriver();
+                    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+                    driver.manage().window().maximize();
                     break;
                 case "microsoft Edge":
                     WebDriverManager.edgedriver().setup();
                     driver=new EdgeDriver();
+                    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+                  driver.manage().window().maximize();
                     break;
             }
         }

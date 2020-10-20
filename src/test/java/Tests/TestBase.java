@@ -1,6 +1,7 @@
 package Tests;
 
 import Pages.Package.Bitrix24Elements;
+import UtilityWedDriverFactory.BrowserUtils;
 import UtilityWedDriverFactory.Driver;
 import UtilityWedDriverFactory.WebInformationReader;
 import org.openqa.selenium.WebDriver;
@@ -11,19 +12,17 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 public abstract class TestBase {
-    protected WebDriver driver;
+
 
     @BeforeMethod
     public void setDriver(){
 
-        driver= Driver.getDiver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Bitrix24Elements bitrix24Elements;
 
             //  get the Url from the file (configuration.properties)
             String url= WebInformationReader.getProperties("Bitrix24Url");
-            Driver.getDiver().get(url);
+                Driver.getDiver().get(url);
+
 
             bitrix24Elements=new Bitrix24Elements();
 
@@ -44,7 +43,8 @@ public abstract class TestBase {
 
             @AfterMethod
     public void tearDown(){
-        driver.close();
+        Driver.getDiver().close();
+
     }
 
 

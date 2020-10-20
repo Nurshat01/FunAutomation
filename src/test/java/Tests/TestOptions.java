@@ -1,40 +1,20 @@
 package Tests;
 
-
 import Pages.Package.CEM24CornerMenuOptions;
+import UtilityWedDriverFactory.BrowserUtils;
 import UtilityWedDriverFactory.Driver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
+public class TestOptions extends  TestBase {
 
-public class TestPage extends TestBase {
-
-//
-//    @Test
-//    public void HomePageLiftSideOptions() {
-//        System.out.println("************Home Page Lift Side Options************");
-//
-//        HomePageLiftSideOptions homePageLiftSideOptions=new HomePageLiftSideOptions();
-//         homePageLiftSideOptions.OptionsInTheList();
-//    }
-//
-//
-//    @Test
-//    public void CornerOptionMnue(){
-//        CEM24CornerMenuOptions cem24CornerMenuOptions=new CEM24CornerMenuOptions();
-//        cem24CornerMenuOptions.optionOfCornerDrop();
-//
-//        cem24CornerMenuOptions.cornerDropDown.click();
-//
-//        cem24CornerMenuOptions.chatAndCalls.click();
-//
-//    }
-
-       @Test
+     @Test
     public void activityStreamOption1(){
-        CEM24CornerMenuOptions cem24CornerMenuOptions=new CEM24CornerMenuOptions();
+       CEM24CornerMenuOptions cem24CornerMenuOptions=new CEM24CornerMenuOptions();
         cem24CornerMenuOptions.cornerDropDown.click();
         cem24CornerMenuOptions.activityStreamOption.click();
-           System.out.println(Driver.getDiver().getTitle());
+
+
        }
 
        @Test
@@ -42,7 +22,8 @@ public class TestPage extends TestBase {
         CEM24CornerMenuOptions cem24CornerMenuOptions=new CEM24CornerMenuOptions();
         cem24CornerMenuOptions.cornerDropDown.click();
         cem24CornerMenuOptions.tasksOption.click();
-           System.out.println(Driver.getDiver().getTitle());
+
+           BrowserUtils.Wait(2);
        }
 
        @Test
@@ -50,7 +31,7 @@ public class TestPage extends TestBase {
         CEM24CornerMenuOptions cem24CornerMenuOptions=new CEM24CornerMenuOptions();
         cem24CornerMenuOptions.cornerDropDown.click();
         cem24CornerMenuOptions.calendarOption.click();
-           System.out.println(Driver.getDiver().getTitle());
+
        }
 
        @Test
@@ -58,7 +39,7 @@ public class TestPage extends TestBase {
         CEM24CornerMenuOptions cem24CornerMenuOptions=new CEM24CornerMenuOptions();
         cem24CornerMenuOptions.cornerDropDown.click();
         cem24CornerMenuOptions.drive.click();
-           System.out.println(Driver.getDiver().getTitle());
+
        }
 
        @Test
@@ -66,7 +47,7 @@ public class TestPage extends TestBase {
         CEM24CornerMenuOptions cem24CornerMenuOptions=new CEM24CornerMenuOptions();
         cem24CornerMenuOptions.cornerDropDown.click();
         cem24CornerMenuOptions.conversationOption.click();
-           System.out.println(Driver.getDiver().getTitle());
+
        }
 
        @Test
@@ -74,7 +55,7 @@ public class TestPage extends TestBase {
         CEM24CornerMenuOptions cem24CornerMenuOptions=new CEM24CornerMenuOptions();
         cem24CornerMenuOptions.cornerDropDown.click();
         cem24CornerMenuOptions.chatAndCalls.click();
-           System.out.println(Driver.getDiver().getTitle());
+
        }
 
        @Test
@@ -82,17 +63,14 @@ public class TestPage extends TestBase {
         CEM24CornerMenuOptions cem24CornerMenuOptions=new CEM24CornerMenuOptions();
         cem24CornerMenuOptions.cornerDropDown.click();
         cem24CornerMenuOptions.mailOption.click();
-           System.out.println(Driver.getDiver().getTitle());
+
        }
        @Test
     public void workflowsOption8(){
         CEM24CornerMenuOptions cem24CornerMenuOptions=new CEM24CornerMenuOptions();
         cem24CornerMenuOptions.cornerDropDown.click();
         cem24CornerMenuOptions.workflowsOption.click();
-           System.out.println(Driver.getDiver().getTitle());
+
        }
-
-
-
 
 }

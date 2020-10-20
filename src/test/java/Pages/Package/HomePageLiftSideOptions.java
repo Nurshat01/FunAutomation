@@ -18,8 +18,6 @@ public class HomePageLiftSideOptions extends TestBase {
 
     }
 
-    @FindBy (xpath = "//*[@id=\"left-menu-list\"]//li")
-    public WebElement LiftSideOptions;
 
     @FindBy (xpath = "//*[@id=\"left-menu-list\"]//li[3]")
     public WebElement tasksOption;
