@@ -1,5 +1,6 @@
 package Pages.Package;
 
+import Tests.TestBase;
 import UtilityWedDriverFactory.BrowserUtils;
 import UtilityWedDriverFactory.Driver;
 import org.openqa.selenium.WebElement;
@@ -10,14 +11,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CEM24CornerMenuOptions {
+public class CEM24CornerMenuOptions extends TestBase {
 
-
-    public CEM24CornerMenuOptions (){
-
-        PageFactory.initElements(Driver.getDiver(),this);
-
-    }
+//
+//    public CEM24CornerMenuOptions (){
+//
+//        PageFactory.initElements(Driver.getDiver(),this);
+//
+//    }
 
 
     @FindBy (xpath = "//div[@id='sitemap-menu']")

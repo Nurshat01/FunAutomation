@@ -20,7 +20,7 @@ public abstract class TestBase {
         Bitrix24Elements bitrix24Elements;
 
             //  get the Url from the file (configuration.properties)
-            String url= WebInformationReader.getProperties("Bitrix24Url");
+                String url= WebInformationReader.getProperties("Bitrix24Url");
                 Driver.getDiver().get(url);
 
 
